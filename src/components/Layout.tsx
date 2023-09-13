@@ -6,36 +6,36 @@ export function Layout({
   children: JSX.Element;
 }) {
   return (
-    <html class="h-full">
+    <html className="h-full">
       <head>
         <title>{title}</title>
         <link rel="stylesheet" href="/tailwind.css" />
         <script src="/htmx.js" defer></script>
       </head>
-      <body class="h-full">
-        <main class="max-w-screen-md mx-auto flex flex-col gap-8">
-          <div class="w-full max-w-screen-md mx-auto">
-            <header class="w-full flex items-center p-8" hx-boost>
+      <body className="h-full">
+        <main className="max-w-screen-md mx-auto flex flex-col gap-8">
+          <div className="w-full max-w-screen-md mx-auto">
+            <header className="w-full flex items-center p-8" hx-boost>
               <h1>
-                <a href="/" class="btn btn-secondary btn-outline">
+                <a href="/" className="btn btn-secondary btn-outline">
                   Hello Bun!
                 </a>
               </h1>
-              <nav class="ml-auto">
-                <a href="/about" class="btn btn-ghost">
+              <nav className="ml-auto">
+                <a href="/about" className="btn btn-ghost">
                   About
                 </a>
               </nav>
             </header>
           </div>
           <section>{children}</section>
-          <footer class="text-center mt-auto p-12 text-sm text-base-content/60">
+          <footer className="text-center mt-auto p-12 text-sm text-base-content/60">
             <p>
               <em>
                 Built with{" "}
                 <a
                   href="https://bun.sh"
-                  class="link"
+                  className="link"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -44,7 +44,7 @@ export function Layout({
                 ,{" "}
                 <a
                   href="https://tailwindcss.com"
-                  class="link"
+                  className="link"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -53,7 +53,7 @@ export function Layout({
                 and{" "}
                 <a
                   href="https://daisyui.com"
-                  class="link"
+                  className="link"
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -1,3 +1,3 @@
 export function Loading() {
-  return <span class="loading loading-ring loading-lg"></span>;
+  return <span className="loading loading-ring loading-lg"></span>;
 }
