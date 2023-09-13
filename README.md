@@ -7,6 +7,8 @@ A simple example app using Bun and it's HTML server along with HTMX for interact
 - [HTMX](https://htmx.org)
 - [Tailwind](https://tailwindcss.com)
 - [DaisyUI](https://daisyui.com)
+- [Docker](https://docker.com)
+- [Fly.io](https://fly.io)
 
 Source code can be found in `./src`. JSX components live in `./src/components`.
 
