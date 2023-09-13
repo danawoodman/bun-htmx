@@ -5,6 +5,7 @@
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
     "ricard.postcss",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-docker"
   ]
 }
