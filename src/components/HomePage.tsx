@@ -6,7 +6,7 @@ export function HomePage() {
   const title = "Hello Bun";
   return (
     <Layout title={title}>
-      <>
+      <div class="flex flex-col gap-8">
         <Hero title={title}>
           <>
             <p class="py-6 text-lg">
@@ -26,15 +26,29 @@ export function HomePage() {
                 About
               </a>
             </nav>
-            <p class="text-sm text-base-content/80 mt-8">
-              <em>
-                The about link above and the top menu uses{" "}
-                <code class="text-accent">hx-boost</code> to do client-side
-                navigation.
-              </em>
-            </p>
           </>
         </Hero>
+        <section class="max-w-md mx-auto flex flex-col gap-4">
+          <h2 class="uppercase text-xl">
+            <strong>HTMX</strong>
+          </h2>
+          <p class="text-sm text-base-content/80">
+            <em>
+              The "About" link above and the top menu uses{" "}
+              <code class="text-accent">hx-boost</code> to do client-side
+              navigation.
+            </em>
+          </p>
+          <p class="text-sm text-base-content/80">
+            <em>
+              The <code class="text-accent">&lt;CurrentTime /&gt;</code>{" "}
+              component below uses{" "}
+              <code class="text-accent">hx-trigger="load"</code> to fetch the
+              current time from the server and display it (with a simulated
+              delay on initial load).
+            </em>
+          </p>
+        </section>
         {/* The delay is to show the loading indicator, otherwise it would probably render to fast to notice */}
         <div
           hx-trigger="load delay:2s"
@@ -44,7 +58,7 @@ export function HomePage() {
         >
           <Loading />
         </div>
-      </>
+      </div>
     </Layout>
   );
 }

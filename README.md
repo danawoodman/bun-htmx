@@ -34,6 +34,8 @@ bun dev:server
 bun dev:tailwind
 ```
 
+Now open up <http://localhost:3000> to see the app running.
+
 If you want a custom port or to enable dev mode, create a `.env` file:
 
 ```sh
@@ -50,10 +52,26 @@ bun build:tailwind
 bun build:server
 ```
 
-Build and run the production bundle in one step:
+Now run the built production bundle:
 
 ```sh
 bun start
+```
+
+## Deployment
+
+This projet includes a Dockerfile and docker-compose.yml file so you can run anywhere Docker is supported.
+
+Using Fly.io, you can deploy this by running:
+
+```sh
+flyctl launch
+```
+
+On subsequent changes, run:
+
+```sh
+flyctl deploy
 ```
 
 ## Credits

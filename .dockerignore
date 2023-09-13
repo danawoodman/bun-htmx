@@ -1,0 +1,17 @@
+# flyctl launch added from .gitignore
+# environment vars
+**/.env
+
+# build artifacts
+**/public/tailwind.css
+**/build
+
+# dependencies
+**/node_modules
+
+# os junk
+**/.DS_Store
+
+# flyctl launch added from node_modules/tailwindcss/stubs/.gitignore
+!node_modules/tailwindcss/stubs/**/*
+fly.toml
