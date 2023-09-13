@@ -1,0 +1,12 @@
+# environment vars
+.env
+
+# build artifacts
+public/tailwind.css
+build/
+
+# dependencies
+node_modules/
+
+# os junk
+.DS_Store

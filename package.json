@@ -1,0 +1,24 @@
+{
+  "name": "bun-htmx",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev:server": "bun run --hot src/index.tsx",
+    "dev:tailwind": "bun run build:tailwind -- --watch",
+    "start": "bun run build:tailwind && bun run build:server && bun run build/index.js",
+    "build:server": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
+    "build:tailwind": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "daisyui": "^3.7.3",
+    "hono": "^3.6.0",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  }
+}

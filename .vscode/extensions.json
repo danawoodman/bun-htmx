@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "moalamri.inline-fold",
+    "otovo-oss.htmx-tags",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ricard.postcss",
+    "mikestead.dotenv"
+  ]
+}
