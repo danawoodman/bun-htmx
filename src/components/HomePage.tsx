@@ -8,25 +8,23 @@ export function HomePage() {
     <Layout title={title}>
       <div className="flex flex-col gap-8">
         <Hero title={title}>
-          <>
-            <p className="text-lg">
-              This is an example of a Bun and it's built in HTTP server app
-              using TailwindCSS and DaisyUI.
-            </p>
-            <nav className="flex flex-col items-center gap-6 mx-auto">
-              <a
-                href="https://github.com/danawoodman/bun-htmx"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Check Out the Code on GitHub
-              </a>
-              <a href="/about" className="btn btn-ghost" hx-boost="true">
-                About
-              </a>
-            </nav>
-          </>
+          <p className="text-lg">
+            This is an example of a Bun and it's built in HTTP server app using
+            TailwindCSS and DaisyUI.
+          </p>
+          <nav className="flex flex-col items-center gap-6 mx-auto">
+            <a
+              href="https://github.com/danawoodman/bun-htmx"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+            >
+              Check Out the Code on GitHub
+            </a>
+            <a href="/about" className="btn btn-ghost" hx-boost="true">
+              About
+            </a>
+          </nav>
         </Hero>
 
         <section className="max-w-md mx-auto flex flex-col gap-4 p-8">

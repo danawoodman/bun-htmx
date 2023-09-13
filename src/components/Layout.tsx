@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
+
 export function Layout({
   title,
   children,
 }: {
   title: string;
-  children: JSX.Element;
+  children: ReactNode;
 }) {
   return (
     <html className="h-full">
