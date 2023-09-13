@@ -9,7 +9,7 @@ export function HomePage() {
       <div className="flex flex-col gap-8">
         <Hero title={title}>
           <>
-            <p className="py-6 text-lg">
+            <p className="text-lg">
               This is an example of a Bun and it's built in HTTP server app
               using TailwindCSS and DaisyUI.
             </p>
@@ -28,6 +28,7 @@ export function HomePage() {
             </nav>
           </>
         </Hero>
+
         <section className="max-w-md mx-auto flex flex-col gap-4 p-8">
           <h2 className="uppercase text-xl">
             <strong>HTMX</strong>
