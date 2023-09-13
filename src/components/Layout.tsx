@@ -21,7 +21,7 @@ export function Layout({
       <body className="h-full">
         <main className="max-w-screen-md mx-auto flex flex-col gap-8">
           <div className="w-full max-w-screen-md mx-auto">
-            <header className="w-full flex items-center p-8" hx-boost>
+            <header className="w-full flex items-center p-8" hx-boost="true">
               <h1>
                 <a href="/" className="btn btn-secondary btn-outline">
                   Hello Bun!

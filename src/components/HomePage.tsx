@@ -13,7 +13,7 @@ export function HomePage() {
               This is an example of a Bun and it's built in HTTP server app
               using TailwindCSS and DaisyUI.
             </p>
-            <nav className="flex items-center gap-6 mx-auto">
+            <nav className="flex flex-col items-center gap-6 mx-auto">
               <a
                 href="https://github.com/danawoodman/bun-htmx"
                 target="_blank"
@@ -22,21 +22,21 @@ export function HomePage() {
               >
                 Check Out the Code on GitHub
               </a>
-              <a href="/about" className="btn btn-ghost" hx-boost>
+              <a href="/about" className="btn btn-ghost" hx-boost="true">
                 About
               </a>
             </nav>
           </>
         </Hero>
-        <section className="max-w-md mx-auto flex flex-col gap-4">
+        <section className="max-w-md mx-auto flex flex-col gap-4 p-8">
           <h2 className="uppercase text-xl">
             <strong>HTMX</strong>
           </h2>
           <p className="text-sm text-base-content/80">
             <em>
               The "About" link above and the top menu uses{" "}
-              <code className="text-accent">hx-boost</code> to do client-side
-              navigation.
+              <code className="text-accent">hx-boost="true"</code> to do
+              client-side navigation.
             </em>
           </p>
           <p className="text-sm text-base-content/80">
