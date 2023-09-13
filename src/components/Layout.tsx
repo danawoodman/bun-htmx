@@ -9,6 +9,12 @@ export function Layout({
     <html className="h-full">
       <head>
         <title>{title}</title>
+        <meta
+          name="description"
+          content="A demo app using Bun + HTMX + TailwindCSS + DaisyUI, deployed on Fly.io"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <link rel="stylesheet" href="/tailwind.css" />
         <script src="/htmx.js" defer></script>
       </head>
