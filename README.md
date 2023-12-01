@@ -1,7 +1,5 @@
 # Bun + HTMX + TailwindCSS example app
 
-Forked from [danawoodman/bun-htmx](https://github.com/danawoodman/bun-htmx)
-
 A simple example app using Bun and it's HTML server along with HTMX for interactivity and Tailwind + DaisyUI for styling.
 
 - [TypeScript](https://www.typescriptlang.org)
@@ -77,7 +75,7 @@ flyctl deploy
 
 ## Credits
 
-Put together by [Dana Woodman](https://danawoodman.com), with some extra features.
+Put together by [Dana Woodman](https://danawoodman.com), with some extra features by [KuryArt](https://github.com/kuryart).
 
 ## License
 
