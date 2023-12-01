@@ -6,8 +6,7 @@ import { html, serve_static } from "./response";
 // Configuration
 const port = process.env?.PORT ? Number(process.env.PORT) : 3000;
 const development = process.env?.NODE_ENV === "development";
-// const hostname = process.env.HOSTNAME ? process.env.HOSTNAME : "localhost";
-const hostname = "localhost";
+const hostname = development ? "localhost" : process.env?.HOSTNAME ?? "localhost";
 
 export function start() {
   const server = Bun.serve({

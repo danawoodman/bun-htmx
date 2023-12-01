@@ -50,7 +50,7 @@ NODE_ENV="development"
 Build a compiled version of the server for running in Bun and an optimized CSS with PostCSS:
 
 ```sh
-bun build
+bun run build
 ```
 
 Now run the built production bundle:

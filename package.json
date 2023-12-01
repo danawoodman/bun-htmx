@@ -5,9 +5,9 @@
   "browserslist": [">0.3%", "not dead", "not op_mini all"],
   "scripts": {
     "build": "bun run build:postcss && bun run build:server",
-    "build:postcss": "bun run postcss -o public/style.css src/css/main.css",
-    "build:server": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
-    "dev":"concurrently \"bun run dev:postcss\" \"bun run dev:server\"",
+    "build:postcss": "bun postcss -o public/style.css src/css/main.css",
+    "build:server": "bun build --target=bun ./src/index.tsx --outfile=build/index.js --minify",
+    "dev": "concurrently \"bun run dev:postcss\" \"bun run dev:server\"",
     "dev:postcss": "bun run build:postcss -- --watch",
     "dev:server": "bun run --hot src/index.tsx",
     "start": "bun run build/index.js"
