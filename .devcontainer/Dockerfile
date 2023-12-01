@@ -7,14 +7,14 @@ ARG NODE_MODULES="tslint-to-eslint-config typescript"
 RUN su node -c "umask 0002 && npm install -g ${NODE_MODULES}" \
     && npm cache clean --force > /dev/null 2>&1
 
-# Install Fly
+# Set environment variables
+ENV NODE_ENV="development"
 ENV FLYCTL_INSTALL="/home/node/.fly"
 ENV PATH="${FLYCTL_INSTALL}/bin:$PATH"
 
+# Install Fly
+USER node
 RUN curl -L https://fly.io/install.sh | sh
-
-# Set environment
-ENV NODE_ENV="development"
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

@@ -5,7 +5,7 @@
   "browserslist": [">0.3%", "not dead", "not op_mini all"],
   "scripts": {
     "build": "bun run build:postcss && bun run build:server",
-    "build:postcss": "bun postcss -o public/style.css src/css/main.css",
+    "build:postcss": "postcss -o public/style.css src/css/main.css",
     "build:server": "bun build --target=bun ./src/index.tsx --outfile=build/index.js --minify",
     "dev": "concurrently \"bun run dev:postcss\" \"bun run dev:server\"",
     "dev:postcss": "bun run build:postcss -- --watch",
@@ -28,6 +28,7 @@
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0"
   }
 }
