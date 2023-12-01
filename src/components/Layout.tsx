@@ -17,7 +17,7 @@ export function Layout({
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <link rel="stylesheet" href="/tailwind.css" />
+        <link rel="stylesheet" href="/style.css" />
         <script src="/htmx.js" defer></script>
       </head>
       <body className="h-full">

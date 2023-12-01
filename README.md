@@ -5,6 +5,7 @@ A simple example app using Bun and it's HTML server along with HTMX for interact
 - [TypeScript](https://www.typescriptlang.org)
 - [Bun](https://bun.sh)
 - [HTMX](https://htmx.org)
+- [PostCSS](https://postcss.org/)
 - [Tailwind](https://tailwindcss.com)
 - [DaisyUI](https://daisyui.com)
 - [Docker](https://docker.com)
@@ -14,7 +15,7 @@ Source code can be found in `./src`. JSX components live in `./src/components`.
 
 Components are converted to static strings and served as HTML to the browser. HTMX is used to add interactivity to the page as needed.
 
-TailwindCSS classes can be given to any component and the `bun dev:tailwind` command will regenerate the CSS file when needed.
+TailwindCSS classes can be given to any component and the `bun dev:postcss` command will regenerate the CSS file when needed.
 
 There is a very dumb/simple static file server in `./src/response.tsx` which takes any file in `./public` and serves it using the `Bun.file` helper. This probably shouldn't be used in any production capacity and instead you should use a static file server for these files, but it's here for demonstration purposes.
 
@@ -30,10 +31,7 @@ bun i
 
 ```sh
 # Run dev server with hot reload (in one tab)
-bun dev:server
-
-# Run production server (in another tab)
-bun dev:tailwind
+bun dev
 ```
 
 Now open up <http://localhost:3000> to see the app running.
@@ -47,11 +45,10 @@ NODE_ENV="development"
 
 ## Production
 
-Build a compiled version of the server for running in Bun and TalwindCSS classes:
+Build a compiled version of the server for running in Bun and an optimized CSS with PostCSS:
 
 ```sh
-bun build:tailwind
-bun build:server
+bun run build
 ```
 
 Now run the built production bundle:
@@ -78,7 +75,7 @@ flyctl deploy
 
 ## Credits
 
-Put together by me, [Dana Woodman](https://danawoodman.com).
+Put together by [Dana Woodman](https://danawoodman.com), with some extra features by [KuryArt](https://github.com/kuryart).
 
 ## License
 
