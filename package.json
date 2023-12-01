@@ -2,23 +2,32 @@
   "name": "bun-htmx",
   "module": "src/index.tsx",
   "type": "module",
+  "browserslist": [">0.3%", "not dead", "not op_mini all"],
   "scripts": {
-    "dev:server": "bun run --hot src/index.tsx",
-    "dev:tailwind": "bun run build:tailwind -- --watch",
-    "start": "bun run build/index.js",
+    "build": "bun run build:postcss && bun run build:server",
+    "build:postcss": "bun run postcss -o public/style.css src/css/main.css",
     "build:server": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
-    "build:tailwind": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css"
+    "dev":"concurrently \"bun run dev:postcss\" \"bun run dev:server\"",
+    "dev:postcss": "bun run build:postcss -- --watch",
+    "dev:server": "bun run --hot src/index.tsx",
+    "start": "bun run build/index.js"
   },
   "dependencies": {
     "bun-types": "latest",
+    "concurrently": "^8.2.2",
     "daisyui": "^3.7.3",
     "hono": "^3.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/react-dom": "^18.2.7"
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-import": "^15.1.0"
   }
 }
